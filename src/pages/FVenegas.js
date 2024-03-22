@@ -37,7 +37,7 @@ const FVenegas = ({ activePage }) => {
                         if (chat.sender === 'FVenegas') {
                             return (
                                 <div className="w-full flex flex-row items-center justify-start gap-2">
-                                    <div className="flex w-[40%] flex-col items-start justify-start gap-0">
+                                    <div className="flex w-[60%] md:w-[40%] flex-col items-start justify-start gap-0">
                                         {
                                             chat.messages.map((message, index) => {
                                                 return (
@@ -52,7 +52,7 @@ const FVenegas = ({ activePage }) => {
                         else if (chat.sender === 'Me') {
                             return (
                                 <div className="w-full flex flex-row-reverse items-center justify-start gap-2">
-                                    <div className="flex w-[40%] flex-col items-end justify-start gap-0">
+                                    <div className="flex w-[60%] md:w-[40%] flex-col items-end justify-start gap-0">
                                         {
                                             chat.messages.map((message, index) => {
                                                 return (
@@ -76,7 +76,7 @@ const FVenegas = ({ activePage }) => {
                     <input name='emojis' className='hidden' id='emojis' type="image" src="" alt="" />
                     <FontAwesomeIcon icon={faFaceLaugh}></FontAwesomeIcon>
                 </label>
-                <input type="text" className='grow' placeholder='Type a message' />
+                <input type="text" className='grow outline-none border-none' placeholder='Type a message' />
                 <img src={sendIcon} alt="" />
             </section>
         </main>

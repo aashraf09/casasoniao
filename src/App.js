@@ -110,7 +110,7 @@ const App = () => {
   return (
     <Router>
       <main className="App flex flex-row items-start justify-between w-full py-5 px-3">
-        <section className='lg:basis-[20%] border-r-2 border-r-slate-500 pr-3'>
+        <section className='lg:basis-[20%] border-r-2 border-r-slate-500 pr-3 hidden md:flex'>
           <SideNav routes={routes} activePage={activePage} onPageChange={handlePageChange} />
         </section>
         <section className="content grow box-border px-5">
@@ -130,7 +130,7 @@ const App = () => {
             <Route path='*' element={<Profile activePage={activePage} />}></Route>
           </Routes>
         </section>
-        <section className="basis-[20%] pl-3 border-l-2 border-l-slate-500 flex flex-col items-center justify-start gap-4 min-h-screen">
+        <section className="basis-[20%] border pl-3 border-l-2 border-l-slate-500 hidden md:flex flex-col items-center justify-start gap-4 min-h-screen">
           <img src={promotionImg1} alt="ad" />
           <img src={promotionImg2} alt="ad" />
         </section>
