@@ -31,7 +31,7 @@ const FVenegas = ({ activePage }) => {
     return (
         <main className='flex flex-col min-h-screen items-center justify-start gap-5'>
             <h3 className="bold-text background-gradient-green-yellow">FVenegas</h3>
-            <section className='w-full grow border flex flex-col items-center justify-start gap-4'>
+            <section className='w-full grow flex flex-col items-center justify-start gap-4'>
                 {
                     chat.map((chat) => {
                         if (chat.sender === 'FVenegas') {
@@ -72,8 +72,12 @@ const FVenegas = ({ activePage }) => {
                     <FontAwesomeIcon icon={faImages}></FontAwesomeIcon>
                     <input name='upload-img' className='hidden' id='upload-img' type="image" src="" alt="" />
                 </label>
-                <label htmlFor="emojis"></label>
-
+                <label htmlFor="emojis">
+                    <input name='emojis' className='hidden' id='emojis' type="image" src="" alt="" />
+                    <FontAwesomeIcon icon={faFaceLaugh}></FontAwesomeIcon>
+                </label>
+                <input type="text" className='grow' placeholder='Type a message' />
+                <img src={sendIcon} alt="" />
             </section>
         </main>
     )
