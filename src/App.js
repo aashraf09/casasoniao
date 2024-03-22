@@ -110,7 +110,7 @@ const App = () => {
         <section className='lg:basis-[20%] border-r-2 border-r-slate-500 pr-3'>
           <SideNav routes={routes} activePage={activePage} onPageChange={handlePageChange} />
         </section>
-        <section className="content grow border box-border px-5">
+        <section className="content grow box-border px-5">
           <Routes>
             {routes.map((route, index) => (
               route.links.map((link, index) => {
