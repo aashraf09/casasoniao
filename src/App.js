@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import General from './pages/General'
 import Profile from './pages/Profile'
 import FVenegas from './pages/FVenegas'
+import RentalDeEquipos from './pages/RentalDeEquipos'
+import BolsaDeTrabajos from './pages/BolsaDeTrabajos'
+import CreateNewTopic from './pages/CreateNewTopic'
 import SideNav from './components/SideNav'
 import promotionImg1 from './assets/promotion_img_1.svg'
 import promotionImg2 from './assets/promotion_img_2.svg'
@@ -28,21 +31,21 @@ const App = () => {
         {
           name: 'Rental de Equipos',
           path: '/rental-de-equipos',
-          Component: () => <Profile activePage={activePage} onPageChange={handlePageChange} />,
+          Component: () => <RentalDeEquipos activePage={activePage} onPageChange={handlePageChange} />,
           borderStyle: 'border-gradient-green-blue',
           backgroundStyle: 'background-gradient-green-blue',
         },
         {
           name: 'Bolsa de Trabajos',
           path: '/bolsa-de-trabajos',
-          Component: () => <Profile activePage={activePage} onPageChange={handlePageChange} />,
+          Component: () => <BolsaDeTrabajos activePage={activePage} onPageChange={handlePageChange} />,
           borderStyle: 'border-gradient-red-green',
           backgroundStyle: 'background-gradient-red-green',
         },
         {
           name: 'Create New Topic',
           path: '/new-topic',
-          Component: () => <Profile activePage={activePage} onPageChange={handlePageChange} />,
+          Component: () => <CreateNewTopic activePage={activePage} onPageChange={handlePageChange} />,
           borderStyle: 'border-disabled',
           backgroundStyle: 'background-disabled',
         }
@@ -127,7 +130,7 @@ const App = () => {
             <Route path='*' element={<Profile activePage={activePage} />}></Route>
           </Routes>
         </section>
-        <section className="basis-[20%] pl-3 border-l-2 border-l-slate-500 flex flex-col items-center justify-between gap-4 h-full">
+        <section className="basis-[20%] pl-3 border-l-2 border-l-slate-500 flex flex-col items-center justify-start gap-4 min-h-screen">
           <img src={promotionImg1} alt="ad" />
           <img src={promotionImg2} alt="ad" />
         </section>

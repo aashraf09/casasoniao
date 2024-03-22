@@ -20,6 +20,27 @@ body {
   font-weight: bold;
 }
 
+.text-sm {
+  font-size: 12px;
+  /* font-weight: bold; */
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+.text-xs{
+  font-size: 10px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+.link-text{
+  color: rgba(0, 112, 194, 0.75);
+}
+
+.post-text{
+  color: rgba(0, 0, 0, 0.75);
+}
+
 
 .btn{
   font-weight: bold;
@@ -170,4 +191,9 @@ box-sizing: content-box;
     padding: var(--padding);
 border-radius: 10px;
 
+}
+
+.user-profile-section{
+  background: rgb(255,255,255);
+background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url('./assets/coverPhoto.svg');
 }
