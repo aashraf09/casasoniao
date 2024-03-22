@@ -9,8 +9,9 @@ import CreateNewTopic from './pages/CreateNewTopic'
 import SideNav from './components/SideNav'
 import promotionImg1 from './assets/promotion_img_1.svg'
 import promotionImg2 from './assets/promotion_img_2.svg'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faBell, faUser } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const App = () => {
   const [activePage, setActivePage] = useState('/')
@@ -107,13 +108,18 @@ const App = () => {
       ]
     }
   ]
+  const toggleSideNav = () => {
+    document.getElementById('sideNav').classList.toggle('hidden')
+    document.getElementById('sideNav').classList.toggle('slide-right')
+  }
   return (
     <Router>
       <main className="App flex flex-row items-start justify-between w-full py-5 px-3">
-        <section className='lg:basis-[20%] border-r-2 border-r-slate-500 pr-3 hidden md:flex'>
+        <section id='sideNav' className='lg:basis-[20%] border-r-2 border-r-slate-500 pr-3 md:flex md:relative absolute bg-[#fff] left-3 top-5'>
           <SideNav routes={routes} activePage={activePage} onPageChange={handlePageChange} />
         </section>
-        <section className="content grow box-border px-5">
+        <button onClick={toggleSideNav} className='absolute top-5 right-5 md:hidden'><FontAwesomeIcon size='xl' icon={faBars} /></button>
+        <section className="content grow box-border md:px-5">
           <Routes>
             {routes.map((route, index) => (
               route.links.map((link, index) => {

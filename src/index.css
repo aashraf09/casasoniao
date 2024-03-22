@@ -197,3 +197,29 @@ border-radius: 10px;
   background: rgb(255,255,255);
 background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url('./assets/coverPhoto.svg');
 }
+
+.slide-right {
+	-webkit-animation: slide-right 0.75s ease-in-out alternate both;
+	        animation: slide-right 0.75s ease-in-out alternate both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
